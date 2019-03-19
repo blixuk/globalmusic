@@ -1,3 +1,1 @@
 # Global Music
-
-### Local Dan!
