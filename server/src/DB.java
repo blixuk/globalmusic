@@ -35,10 +35,8 @@ public class DB
 		Connection connection = getConnection();
 		java.sql.Statement statement = connection.createStatement();
 		ResultSet rs = statement.executeQuery("SELECT COUNT(ID) as RowNum FROM " + Config.getName() + "." + table);
-		{
-			rs.next();
-			count = rs.getInt("RowNum");
-		}
+		rs.next();
+		count = rs.getInt("RowNum");
 		rs.close();
 		statement.close();
 		return count;

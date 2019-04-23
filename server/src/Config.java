@@ -25,7 +25,7 @@ public class Config {
 
 	// SERVER //
 
-	private static int S_PORT = 5555;
+	private static int S_PORT = 5858;
 
 	public static int getPort() {
 		return S_PORT;

@@ -3,8 +3,8 @@ public class Config {
 	
 	// SERVER //
 	private static String S_HOST = "localhost";	// Server Host address
-	private static int S_PORT = 5555;			// Server Port Address
-	private static int S_TIMEOUT = 1000;			// Server Connection Timeout
+	private static int S_PORT = 5858;			// Server Port Address
+	private static int S_TIMEOUT = 1000;		// Server Connection Timeout
 
 	public static String getHost() {
 		return S_HOST;
