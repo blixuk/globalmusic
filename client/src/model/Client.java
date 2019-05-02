@@ -17,6 +17,10 @@ public class Client
 			Logger.log("Client Connected");
 			Logger.log(server.toString());
 
+			Map<String, String> call = new HashMap<>();
+			call.put("CREATE_USER", "null,testuser1,password,bob,smith,test1@test.com,09090909090,null,10/10/1991,10/10/2019,1");
+			socketOut.writeObject(call);
+
 			while (true) {
 				Logger.log("Sent: ");
 				String userInput = consoleInput.nextLine(); //Get user input
