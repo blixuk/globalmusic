@@ -1,0 +1,48 @@
+SQL
+# some of the sql is currently in the other programme.
+# but throughout the easter break the school sql 
+# server has been down
+
+CREATE TABLE TICKET (
+    ticketID int,
+    ufname varchar(255),
+    ulname varchar(255),
+    ucompany varchar(255),
+    City varchar(255),
+    EventID int, 
+);
+
+COMMIT
+
+CREATE TABLE Event (
+);
+
+create table USER_DATA (
+    username VARCHAR(20),
+    password VARCHAR(32),
+    first_name VARCHAR(20),
+    last_name VARCHAR(20),
+    DOB DATE,
+    streetname VARCHAR(50),
+    housenumber INT(4),
+    postcode VARCHAR(8),
+    city VARCHAR(20),
+    county VARCHAR(20),
+    email VARCHAR(50),
+    phone VARCHAR(11),
+    uuid INT(10),
+    created DATE,
+    acc_type int(1)
+);
+
+create table TICKET (
+	first_name VARCHAR(20),
+    last_name VARCHAR(20),
+    uuid VARCHAR(32),
+    event_name VARCHAR(20),
+    ticket_price int(5),
+    entry_granted int(2),
+    event_date date,
+    venue_id int(8)
+);
+
