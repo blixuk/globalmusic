@@ -18,16 +18,17 @@ public class Client
 			Logger.log(server.toString());
 
 			Map<String, String> call = new HashMap<>();
-			call.put("CREATE_USER", "null,testuser1,password,bob,smith,test1@test.com,09090909090,null,10/10/1991,10/10/2019,1");
+			call.put("CREATE_USER", "null,testuser1,password,bob,smith,test@test.com,09090909090,null,1991-10-10,2019-10-10,1");
 			socketOut.writeObject(call);
 
 			while (true) {
-				Logger.log("Sent: ");
 				String userInput = consoleInput.nextLine(); //Get user input
 				Map<String, String> header = new HashMap<>();
 				header.put("GET",  userInput);
 
 				socketOut.writeObject(header); //Send data to server
+
+				Logger.log("Sent: " + userInput);
 
 				String serverResponse = (String) socketIn.readObject(); //Read data from server
 
