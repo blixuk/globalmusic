@@ -7,14 +7,14 @@ public class API
 	public static String parse(Map data) throws java.sql.SQLException, java.lang.ClassNotFoundException{
 		Map<String, String> header = data;
 
-		if (header.containsKey("GET")) {
-			Logger.log("Received: " + (String) header.get("GET"));
-			switch ((String) header.get("GET")) {
+		if (header.containsKey("USER")) {
+			Logger.log("Received: " + (String) header.get("USER"));
+			switch ((String) header.get("USER")) {
 				case "TEST":
 					output = "THIS IS WORKING";
 					break;
 				default:
-					output = (String) header.get("GET");
+					output = (String) header.get("USER");
 			}
 		}
 
