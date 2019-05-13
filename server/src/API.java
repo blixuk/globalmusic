@@ -61,7 +61,7 @@ public class API
 		if (header.containsKey("CREATE_VENUE")) {
 			Logger.log("Received: " + (String) header.get("CREATE_VENUE"));
 			String args[] = header.get("CREATE_VENUE").split(",");
-			DB.createEvent(args[0], args[1], args[2], args[3]);
+			DB.createVenue(args[0], args[1], args[2], args[3]);
 			Logger.log("DB: venue created: " + args[0]);
 			output = "Completed";
 		}

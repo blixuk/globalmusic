@@ -2,10 +2,15 @@
 public class Config {
 	
 	// DATABASE //
-	private static String DB_HOST = "192.168.1.50";
-	private static String DB_NAME = "globalmusic";
-	private static String DB_USER = "global";
-	private static String DB_PASS = "!ZeroCube0112358";
+	//private static String DB_HOST = "192.168.1.50";
+	//private static String DB_NAME = "globalmusic";
+	//private static String DB_USER = "global";
+	//private static String DB_PASS = "!ZeroCube0112358";
+	
+	private static String DB_HOST = "10.1.63.200";
+	private static String DB_NAME = "CIS017_1807379";
+	private static String DB_USER = "1807379";
+	private static String DB_PASS = "1807379";
 
 	public static String getHost() {
 		return DB_HOST;

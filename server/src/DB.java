@@ -16,12 +16,12 @@ public class DB
 		Connection connection = getConnection();
 		java.sql.Statement statement = connection.createStatement();
 		String values = String.format("(%s,'%s','%s','%s','%s','%s',%s,'%s','%s','%s',%s);", id, username, password, fname, lname, email, phone, company, dob, sud, type);
-		statement.execute("INSERT INTO `user`(`ID`, `USERNAME`, `PASSWORD`, `FNAME`, `LNAME`, `EMAIL`, `PHONE`, `COMPANY`, `DOB`, `SUD`, `TYPE`) VALUES " + values);
+		statement.execute("INSERT INTO `USER`(`ID`, `USERNAME`, `PASSWORD`, `FNAME`, `LNAME`, `EMAIL`, `PHONE`, `COMPANY`, `DOB`, `SUD`, `TYPE`) VALUES " + values);
 		statement.close();
 		return true;
 	}
 
-	public static boolean createTicket(String id, String uid, String ufname, String ulname, String ucompany, String eid, String ename, String eprice, String evenue, String edate, String etime, String amount) {
+	public static boolean createTicket(String id, String uid, String ufname, String ulname, String ucompany, String eid, String ename, String eprice, String evenue, String edate, String etime, String amount) throws java.sql.SQLException, java.lang.ClassNotFoundException {
 		Connection connection = getConnection();
 		java.sql.Statement statement = connection.createStatement();
 		String values = String.format("(%s,%s,'%s','%s','%s',%s,'%s',%s,'%s','%s','%s',%s);", id, uid, ufname, ulname, ucompany, eid, ename, eprice, evenue, edate, etime, amount);
@@ -30,7 +30,7 @@ public class DB
 		return true;
 	}
 
-	public static boolean createInvoice(String id, String uid, String ucompany, String eid, String ename, String eprice, String eamount, String edate, String etime, String dop) {
+	public static boolean createInvoice(String id, String uid, String ucompany, String eid, String ename, String eprice, String eamount, String edate, String etime, String dop) throws java.sql.SQLException, java.lang.ClassNotFoundException {
 		Connection connection = getConnection();
 		java.sql.Statement statement = connection.createStatement();
 		String values = String.format("(%s,%s,'%s',%s,'%s',%s,%s,'%s','%s','%s');", id, uid, ucompany, eid, ename, eprice, eamount, edate, etime, dop);
@@ -39,7 +39,7 @@ public class DB
 		return true;
 	}
 
-	public static boolean createEvent(String id, String name, String vid, String vname, String vaddress, String vcapacity, String date, String time, String bid, String bname, String price) {
+	public static boolean createEvent(String id, String name, String vid, String vname, String vaddress, String vcapacity, String date, String time, String bid, String bname, String price) throws java.sql.SQLException, java.lang.ClassNotFoundException {
 		Connection connection = getConnection();
 		java.sql.Statement statement = connection.createStatement();
 		String values = String.format("(%s,'%s',%s,'%s','%s',%s,'%s','%s',%s,'%s',%s);", id, name, vid, vname, vaddress, vcapacity, date, time, bid, bname, price); 
@@ -48,7 +48,7 @@ public class DB
 		return true;
 	}
 
-	public static boolean createBand(String id, String name, String bio, String genre, String members, String amount, String url, String image) {
+	public static boolean createBand(String id, String name, String bio, String genre, String members, String amount, String url, String image) throws java.sql.SQLException, java.lang.ClassNotFoundException {
 		Connection connection = getConnection();
 		java.sql.Statement statement = connection.createStatement();
 		String values = String.format("(%s,'%s','%s','%s','%s',%s,'%s','%s');", id, name, bio, genre, members, amount, url, image);
@@ -57,7 +57,7 @@ public class DB
 		return true;
 	}
 
-	public static boolean createVenue(String id, String name, String address, String capacity) {
+	public static boolean createVenue(String id, String name, String address, String capacity) throws java.sql.SQLException, java.lang.ClassNotFoundException {
 		Connection connection = getConnection();
 		java.sql.Statement statement = connection.createStatement();
 		String values = String.format("(%s,'%s','%s',%s);", id, name, address, capacity);
