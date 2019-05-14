@@ -15,6 +15,7 @@ CREATE TABLE TICKET (
 COMMIT
 
 CREATE TABLE Event (
+    
 );
 
 create table USER_DATA (

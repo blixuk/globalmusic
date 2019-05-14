@@ -17,15 +17,17 @@
 #### Features
 
 - Public / Corporate
-	- Register
-		- Username
-		- Password
-		- First Name
-		- Last Name
-		- Address
-		- Phone
-		- Email
-		- Payment Details
+	/- Register
+		- Username varchar(255),
+		- Password varchar(255),
+		- First Name varchar(255),
+		- Last Name varchar(255),
+		- Address varchar(255),
+		- Phone int,
+		- Email varchar(255),
+		- Payment Details varchar(255)
+
+	
 	- Login
 	- Account
 		- Edit Account Details
@@ -95,21 +97,21 @@
 	- AMOUNT
 
 - invoice
-	- ID
-	- UID *
-		- UCOMPANY
-	- EID *
-		- ENAME
-		- EPRICE
-		- EAMOUNT
-		- EDATE
-		- ETIME
+	- ID int,
+	- UID * int,
+		- UCOMPANY varchar(255),
+	- EID * int,
+		- ENAME varchar(255),
+		- EPRICE varchar(255),
+		- EAMOUNT varchar(255),
+		- EDATE date,
+		- ETIME time
 	- DOP
 
 - event
-	- ID
-	- NAME
-	- VID *
+	- ID int,
+	- NAME varchar(255),
+	- VID * 
 		- VNAME
 		- VADDRESS
 		- VCAPACITY
